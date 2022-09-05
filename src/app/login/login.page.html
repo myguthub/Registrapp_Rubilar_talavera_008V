@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <center>
+    <ion-title>RegistrApp</ion-title>
+    </center>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class='logo'>
+
+    
+    <ion-img [src]="isInDarkMode ? '../../assets/logo-dark-mode.png' : '../../assets/logo-white-mode.png'" alt=""></ion-img>
+
+  </div>
+  <br>
+  <br>
+  <form [formGroup]="loginForm">
+
+    <div class="login-container ion-text-center" color="ion-color-primary" mode="md">
+      <ion-item color="undefined">
+        <ion-input type="text" formControlName="user" placeholder="Correo"></ion-input>
+      </ion-item>
+
+      <ion-item color="undefined">
+        <ion-input type="password" formControlName="pass" placeholder="Contraseña"></ion-input>
+      </ion-item>
+      <ion-button (click)="login()" color="warning" mode="md">
+        INICIAR SESIÓN
+      </ion-button>
+    </div>
+
+
+
+  </form>
+
+</ion-content>
